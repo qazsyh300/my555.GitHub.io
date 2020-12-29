@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>
+	 
+		王子哥粉丝小屋		</title>
+	<meta name="format-detection" content="telephone=no, address=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="shortcut icon" href="https://gzhtp.laiheba.cn/attachment/images/global/wechat.jpg" />
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script type="text/javascript" src="https://gzhtp.laiheba.cn/app/resource/js/app/util.js"></script>
+	<script src="https://gzhtp.laiheba.cn/app/resource/js/require.js"></script>
+	<script type="text/javascript" src="https://gzhtp.laiheba.cn/app/resource/js/lib/jquery-1.11.1.min.js?v=20170802"></script>
+	<!-- <script type="text/javascript" src="https://gzhtp.laiheba.cn/app/resource/js/lib/mui.min.js?v=20170802"></script> -->
+	<script type="text/javascript" src="https://gzhtp.laiheba.cn/app/resource/js/app/common.js?v=20170802"></script>
+	<!-- <link href="https://gzhtp.laiheba.cn/app/resource/css/bootstrap.min.css?v=20170802" rel="stylesheet"> -->
+	<!-- <link href="https://gzhtp.laiheba.cn/app/resource/css/common.min.css?v=20170802" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css"/>
+
+
+
+	<!-- head 中 -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+
+	
+
+
+
+	<script type="text/javascript">
+	if(navigator.appName == 'Microsoft Internet Explorer'){
+		if(navigator.userAgent.indexOf("MSIE 5.0")>0 || navigator.userAgent.indexOf("MSIE 6.0")>0 || navigator.userAgent.indexOf("MSIE 7.0")>0) {
+			alert('您使用的 IE 浏览器版本过低, 推荐使用 Chrome 浏览器或 IE8 及以上版本浏览器.');
+		}
+	}
+	window.sysinfo = {
+		'uniacid': '2',		'acid': '2',				'siteroot': 'http://555da.xyz',
+		'siteurl': 'http://555da.xyz:80/wep/index.php?i=2&c=entry&do=search&m=touma_form',
+		'attachurl': 'https://gzhtp.laiheba.cn/attachment/',
+		'attachurl_local': 'https://gzhtp.laiheba.cn/attachment/',
+		'attachurl_remote': '',
+		'MODULE_URL': 'https://gzhtp.laiheba.cn/addons/touma_form/',		'cookie' : {'pre': 'fafe_'}
+	};
+	// jssdk config 对象
+	jssdkconfig = null || {};
+	// 是否启用调试
+	jssdkconfig.debug = false;
+	jssdkconfig.jsApiList = [
+		'checkJsApi',
+		'onMenuShareTimeline',
+		'onMenuShareAppMessage',
+		'onMenuShareQQ',
+		'onMenuShareWeibo',
+		'hideMenuItems',
+		'showMenuItems',
+		'hideAllNonBaseMenuItem',
+		'showAllNonBaseMenuItem',
+		'translateVoice',
+		'startRecord',
+		'stopRecord',
+		'onRecordEnd',
+		'playVoice',
+		'pauseVoice',
+		'stopVoice',
+		'uploadVoice',
+		'downloadVoice',
+		'chooseImage',
+		'previewImage',
+		'uploadImage',
+		'downloadImage',
+		'getNetworkType',
+		'openLocation',
+		'getLocation',
+		'hideOptionMenu',
+		'showOptionMenu',
+		'closeWindow',
+		'scanQRCode',
+		'chooseWXPay',
+		'openProductSpecificView',
+		'addCard',
+		'chooseCard',
+		'openCard',
+		'openAddress'
+	];
+	</script>
+</head>
+<body>
+	<div id="main">
+<style type="text/css" media="all">
+    body{
+        background-color: #FEFEFE;
+    }
+    hr{
+        background-color:#efefef;height: 1px;border: none;
+    }
+    #search{
+        margin:50px 0 0 0;
+    }
+    .search-input {
+    padding: 10px 15px;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    flex-direction: column;
+    }
+    .weui-uploader__title{
+        color:#8D8D8D;
+    }
+    .weui-input{
+        border: 1px solid #8D8D8D;border-radius: 3px;width:92%;
+        padding: 3px 10px;
+    }
+    #forminfo{
+        padding:10px 0 35px 0;
+    }
+    .remark{
+        padding: 10px 15px;
+        font-size:14px;color:red;
+    }
+</style>
+<div id="search">
+    <hr />
+    <div id="forminfo">
+        <div class="search-input">
+            <div class="weui-uploader__hd">
+              <p class="weui-uploader__title"><font style="color:red;margin-right:3px;">*</font>手机号</p>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="number" placeholder="例如：13974185236" name="skey" id="skey">
+            </div>
+        </div>
+        <div class="weui-btn-area">
+    	    <input type="submit" name="submit" class="weui-btn weui-btn_primary" value="查询审核结果" id="submit">
+    	</div>
+	</div>
+	<hr />
+	<div class="remark">
+	    <p>审核与快递的说明</p>
+	    <p>1、这里目前无法查询快递进度，只能看是否审核通过</p>
+	    <p>2、审核通过后，助理小姐姐会尽快安排发货，发货使用根据不同地区使用顺丰快递</p>
+	    <p>3、快递员收件后，会通过短信通知您</p>
+	    <p>4、关注《顺丰速运》公众号，如果发的顺丰快递，则快递员收件后会收到顺丰速运的公众号通知</p>
+	</div>
+</div>
+<script type="text/javascript" charset="utf-8">
+    $("#submit").click(function(e) {
+     	var skey = $("#skey").val();
+     	var url = "https://gzhtp.laiheba.cn/app/index.php?i=2&c=entry&do=mylist&m=touma_form"+"&skey="+skey;
+        window.location.href = url;  
+	});
+</script>
+</div>
+	<style>
+		h5{color:#555;}
+	</style>
+		<script type="text/javascript">
+	$(function(){
+		wx.config(jssdkconfig);
+		var $_share = {"title":"\u738b\u5b50\u54e5\u7c89\u4e1d\u5c0f\u5c4b","imgUrl":"","desc":"","link":"https:\/\/gzhtp.laiheba.cn\/app\/index.php?i=2&c=entry&do=search&m=touma_form"};
+		if(typeof sharedata == 'undefined'){
+			sharedata = $_share;
+		} else {
+			sharedata['title'] = sharedata['title'] || $_share['title'];
+			sharedata['desc'] = sharedata['desc'] || $_share['desc'];
+			sharedata['link'] = sharedata['link'] || $_share['link'];
+			sharedata['imgUrl'] = sharedata['imgUrl'] || $_share['imgUrl'];
+		}
+		if(sharedata.imgUrl == ''){
+			var _share_img = $('body img:eq(0)').attr("src");
+			if(_share_img){
+				sharedata['imgUrl'] = util.tomedia(_share_img);
+			}
+		}
+		if(sharedata.imgUrl == ""){
+			sharedata.imgUrl = window.sysinfo.attachurl + 'images/global/wechat_share.jpg';
+		}
+		if(sharedata.desc == ''){
+			var _share_content = util.removeHTMLTag($('body').html());
+			if(typeof _share_content == 'string'){
+				sharedata.desc = _share_content.replace($_share['title'], '')
+			}
+		}
+		wx.ready(function () {
+			wx.onMenuShareAppMessage(sharedata);
+			wx.onMenuShareTimeline(sharedata);
+			wx.onMenuShareQQ(sharedata);
+			wx.onMenuShareWeibo(sharedata);
+		});
+				if ($('.js-quickmenu').size() > 0) {
+			var h = $('.js-quickmenu .nav-home').height()+20+'px';
+			$('body').css("padding-bottom",h);
+			$('body .mui-content').css("bottom",h);
+		} else if($('.nav-menu-app').size() > 0) {
+			var h = $('.nav-menu-app').height()+'px';
+			$('body').css("padding-bottom",h);
+			$('.mui-content').css('bottom',h);
+		}else{
+			$('body').css("padding-bottom", "0");
+			$('.mui-content').css('bottom', "0");
+		}
+	});
+	</script>
+<script>;</script><script type="text/javascript" src="https://gzhtp.laiheba.cn/app/index.php?i=2&c=utility&a=visit&do=showjs&m=touma_form"></script></body>
+
+
+</html>
